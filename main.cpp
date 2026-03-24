@@ -292,8 +292,7 @@ static void PatchProcessesByWhitelistTree(
             DWORD err = GetLastError();
             std::wcout << L"[SKIP] PID=" << pid
                        << L" " << FindExeNameByPid(pid, processMap)
-                       << L" OpenProcess failed: " << err
-                       << L" (" << GetLastErrorMessage(err) << L")\n";
+                       << L" OpenProcess failed: " << err << L")\n";
             continue;
         }
 
@@ -308,8 +307,7 @@ static void PatchProcessesByWhitelistTree(
 		    DWORD err = GetLastError();
 		    std::wcout << L"[FAIL] PID=" << pid
 		               << L" " << GetProcessImageName(hProcess)
-		               << L" SetProcessInformation failed: " << err
-		               << L" (" << GetLastErrorMessage(err) << L")\n";
+		               << L" SetProcessInformation failed: " << err << L")\n";
 		}
 
         CloseHandle(hProcess);
